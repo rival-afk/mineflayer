@@ -59,7 +59,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: ${{ contains(matrix.versions, '26.1.2') && '26' || '21' }}
+          java-version: ${{ contains(matrix.versions, '26.') && '26' || '21' }}
       - name: Install Dependencies
         run: npm install
 
